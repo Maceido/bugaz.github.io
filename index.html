@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Weirdo</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    animation: disco 1s infinite;
+    z-index: 10;
+}
+
+@keyframes disco {
+    0%   { color: red;     text-shadow: 0 0 20px red; }
+    20%  { color: orange;  text-shadow: 0 0 20px orange; }
+    40%  { color: yellow;  text-shadow: 0 0 20px yellow; }
+    60%  { color: lime;    text-shadow: 0 0 20px lime; }
+    80%  { color: cyan;    text-shadow: 0 0 20px cyan; }
+    100% { color: magenta; text-shadow: 0 0 20px magenta; }
+}
+
+.frog {
+    position: fixed;
+    bottom: 10px;
+    width: 140px;
+    animation: bounce 0.5s infinite alternate;
+}
+
+.frog1 {
+    left: 10%;
+}
+
+.frog2 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.frog3 {
+    right: 10%;
+}
+
+@keyframes bounce {
+    from {
+        bottom: 10px;
+    }
+    to {
+        bottom: 50px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Welcome to my website, weirdo</h1>
+
+<img class="frog frog1"
+     src="https://media.tenor.com/0AVbKGY_MxMAAAAC/dancing-frog.gif"
+     alt="Dancing Frog">
+
+<img class="frog frog2"
+     src="https://media.tenor.com/0AVbKGY_MxMAAAAC/dancing-frog.gif"
+     alt="Dancing Frog">
+
+<img class="frog frog3"
+     src="https://media.tenor.com/0AVbKGY_MxMAAAAC/dancing-frog.gif"
+     alt="Dancing Frog">
+
+</body>
+</html>
