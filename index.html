@@ -1,84 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bbugaz</title>
-
-<style>
-body {
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: black;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
-    font-size: 60px;
-    text-align: center;
-    animation: disco 1s infinite;
-    z-index: 10;
-}
-
-@keyframes disco {
-    0%   { color: red;     text-shadow: 0 0 20px red; }
-    20%  { color: orange;  text-shadow: 0 0 20px orange; }
-    40%  { color: yellow;  text-shadow: 0 0 20px yellow; }
-    60%  { color: lime;    text-shadow: 0 0 20px lime; }
-    80%  { color: cyan;    text-shadow: 0 0 20px cyan; }
-    100% { color: magenta; text-shadow: 0 0 20px magenta; }
-}
-
-.frog {
-    position: fixed;
-    bottom: 10px;
-    width: 140px;
-    animation: bounce 0.5s infinite alternate;
-}
-
-.frog1 {
-    left: 10%;
-}
-
-.frog2 {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.frog3 {
-    right: 10%;
-}
-
-@keyframes bounce {
-    from {
-        bottom: 10px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
     }
-    to {
-        bottom: 50px;
+
+    /* Spinning disco ball emoji */
+    .disco {
+      animation: spin 4s linear infinite;
+      font-size: 100px;
     }
-}
-</style>
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Message styling */
+    #message {
+      font-size: 64px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* Container for dancing gifs */
+    #dancers {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #dancers img {
+      width: 150px;
+      height: auto;
+    }
+  </style>
 </head>
-
 <body>
+  <!-- Disco ball emoji that spins -->
+  <div class="disco">🫩</div>
 
-<h1>Sup, weirdo.</h1>
+  <!-- Main message -->
+  <div id="message">sup, weirdo.</div>
 
-<img class="frog frog1"
-     src="https://tenor.com/search/cat-dancing-gifs"
-     alt="Dancing Frog">
-
-<img class="frog frog2"
-     src="https://tenor.com/search/cat-dancing-gifs"
-     alt="Dancing Frog">
-
-<img class="frog frog3"
-     src="https://tenor.com/search/cat-dancing-gifs"
-     alt="Dancing Frog">
-
+  <!-- Dancing gifs at the bottom; you can swap these URLs for any gifs you prefer -->
+  <div id="dancers">
+    <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="Dancing 1">
+    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Dancing 2">
+    <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Dancing 3">
+  </div>
 </body>
 </html>
